@@ -2,7 +2,8 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    @SuppressWarnings("resource")
+	public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Seleccione una línea de producción:");
@@ -37,8 +38,11 @@ public class Main {
             lineaSeleccionada.iniciarProduccion();
             lineaSeleccionada.producir();
         }
-
+        
         scanner.close();
+     
     }
+    
+    
 }
 

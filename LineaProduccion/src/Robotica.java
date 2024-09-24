@@ -40,9 +40,62 @@ public class Robotica extends LineaProduccion {
 			} else {
 			    System.out.println("No se agregará colorante. Continuando con la producción.");
 			}
-			
 
 			calcularMateriales(capacidadVela, cantidadEnvases);
+			
+			System.out.println("¿Continuar con la producción? (si/no): ");
+			String continuarProduccion = scanner.next().toLowerCase();
+		
+			if (continuarProduccion.equals("si")) {
+				try {
+			
+					System.out.println("Cortando pabilos...");
+					Thread.sleep(2000);
+			
+					System.out.println("Preparando pabilos con la chapeta...");
+					Thread.sleep(2000);
+					
+					System.out.println("Pegando pabilos en los envases...");
+			        Thread.sleep(2000);
+			
+			        System.out.println("Derritiendo cera...");
+			        Thread.sleep(2000);
+			
+			        System.out.println("Agregando vybar...");
+			        Thread.sleep(2000);
+			
+			        System.out.println("Revolviendo para disolverlo en la cera...");
+			        Thread.sleep(2000);
+			
+			        System.out.println("Agregando esencia...");
+			        Thread.sleep(2000);
+			
+			        System.out.println("Revolviendo para mezclarlo con la cera y el vybar...");
+			        Thread.sleep(2000);
+			
+			    if (ponerColorante.equals("si")) {
+				
+				    System.out.println("Agregando colorante...");
+				    Thread.sleep(2000);
+			    } else {
+			    	System.out.println("No se agregará colorante.");
+			    	Thread.sleep(1000);
+			    }
+			
+			        System.out.println("La preparación está lista.");
+			        Thread.sleep(1000);
+			
+			        System.out.println("Vertiendo la cera en los envases...");
+			        Thread.sleep(2000);
+			
+	                System.out.println("Producción finalizada con éxito.");
+	                } catch (InterruptedException e) {
+		                System.out.println("Error en la producción: " + e.getMessage());
+		            }
+				
+			} else {
+	        	System.out.println("Producción cancelada.");
+	        }
 		}
     }
 
@@ -75,6 +128,8 @@ public class Robotica extends LineaProduccion {
         System.out.println("Esencia: " + cantidadEsencia + " gramos.");
         System.out.println("Vybar: " + cantidadVybar + " gramos.");
     }
-}
+ }
+
+
 
 
