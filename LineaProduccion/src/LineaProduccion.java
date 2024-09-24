@@ -17,6 +17,6 @@ public class LineaProduccion {
     }
 
    
-    public void producir(){
+    public void producir() {
     }
 }

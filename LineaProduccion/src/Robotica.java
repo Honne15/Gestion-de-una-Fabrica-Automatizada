@@ -123,7 +123,7 @@ public class Robotica extends LineaProduccion {
         double cantidadEsencia = capacidadVela * 0.08 * cantidadEnvases; 
         double cantidadVybar = capacidadVela * 0.02 * cantidadEnvases;
 
-        System.out.println("Para " + cantidadEnvases + " envases, se necesitan:");
+        System.out.println("Para " + cantidadEnvases + " velas, se necesitan:");
         System.out.println("Cera: " + cantidadCera + " gramos.");
         System.out.println("Esencia: " + cantidadEsencia + " gramos.");
         System.out.println("Vybar: " + cantidadVybar + " gramos.");
