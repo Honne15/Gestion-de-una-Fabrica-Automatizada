@@ -22,19 +22,15 @@ public class Main {
                 switch (opcion) {
                     case 1:
                         lineaSeleccionada = new Robotica();
-                        System.out.println("Has seleccionado la línea de producción: Robótica");
                         break;
                     case 2:
                         lineaSeleccionada = new Decoracion();
-                        System.out.println("Has seleccionado la línea de producción: Decoración");
                         break;
                     case 3:
                         lineaSeleccionada = new ControlCalidad();
-                        System.out.println("Has seleccionado la línea de producción: Control de Calidad");
                         break;
                     case 4:
                         lineaSeleccionada = new Embalaje();
-                        System.out.println("Has seleccionado la línea de producción: Embalaje");
                         break;
                     case 5:
                         System.out.println("Saliendo del sistema...");

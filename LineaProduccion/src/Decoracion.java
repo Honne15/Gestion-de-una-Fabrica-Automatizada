@@ -20,6 +20,7 @@ public class Decoracion extends LineaProduccion{
                 }
             } else {
                 System.out.println("No se agregará decoración. Continuando con la producción.");
+                return;
             }
 
             System.out.println("\n¿Continuar con la decoración? (si/no): ");
@@ -90,6 +91,7 @@ public class Decoracion extends LineaProduccion{
 			Thread.sleep(2000);
 		
             System.out.println("Decoración finalizada con éxito.");
+            Thread.sleep(2000);
             } catch (InterruptedException e) {
             	System.out.println("Error en la decoración: " + e.getMessage());
 	        }
