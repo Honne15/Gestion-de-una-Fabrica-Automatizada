@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class LineaProduccion {
 	public static final int ROBOTICA = 180;
@@ -13,11 +14,11 @@ public class LineaProduccion {
 
    
     public void iniciarProduccion() {
-        System.out.println("Iniciando producción en la línea: " + nombreLinea);
+        System.out.println("\nIniciando producción en la línea: " + nombreLinea);
     }
 
    
-    public void producir() {
+    public void producir(Scanner scanner) {
     }
    
 }

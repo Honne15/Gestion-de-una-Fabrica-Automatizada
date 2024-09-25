@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;
+        Robotica robotica = null;
 
         do {
             System.out.println("\nSeleccione una línea de producción:");
@@ -21,32 +22,37 @@ public class Main {
 
                 switch (opcion) {
                     case 1:
-                        lineaSeleccionada = new Robotica();
+                        robotica = new Robotica(); 
+                        lineaSeleccionada = robotica;
                         break;
                     case 2:
                         lineaSeleccionada = new Decoracion();
                         break;
                     case 3:
-                        lineaSeleccionada = new ControlCalidad();
+                        if (robotica == null) {
+                            System.out.println("Primero debes producir en la línea de Robótica.");
+                            continue;
+                        }
+                        lineaSeleccionada = new ControlCalidad(robotica); 
                         break;
                     case 4:
                         lineaSeleccionada = new Embalaje();
                         break;
                     case 5:
-                        System.out.println("Saliendo del sistema...");
+                        System.out.println("\nSaliendo del sistema...");
                         break;
                     default:
-                        System.out.println("Opción no válida. Intenta de nuevo.");
+                        System.out.println("\nOpción no válida. Intenta de nuevo.");
                         continue; 
                 }
 
                 if (lineaSeleccionada != null) {
                     lineaSeleccionada.iniciarProduccion();
-                    lineaSeleccionada.producir();
+                    lineaSeleccionada.producir(scanner); 
                 }
             } else {
-                System.out.println("Entrada no válida. Por favor, ingresa un número.");
-                scanner.next();
+                System.out.println("\nEntrada no válida. Por favor, ingresa un número.");
+                scanner.next(); 
             }
         } while (opcion != 5);
 

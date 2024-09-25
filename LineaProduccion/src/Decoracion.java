@@ -1,14 +1,13 @@
 import java.util.Scanner;
 
-public class Decoracion extends LineaProduccion{
+public class Decoracion extends LineaProduccion {
 	
 	public Decoracion() {
         super("Decoración");  
     }
 	
-	public void producir() {
-        try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println("\nLa/s vela/s requiere/n decoración (si/no): ");
+	public void producir(Scanner scanner) {
+            System.out.println("\nLas velas requieren decoración (si/no): ");
             String ponerDecoracion = scanner.next().toLowerCase();
             
             if (ponerDecoracion.equals("si")) {
@@ -16,10 +15,10 @@ public class Decoracion extends LineaProduccion{
                 if (seleccion != null) {
                     System.out.println("\nDecoración seleccionada con éxito.");
                 } else {
-                    System.out.println("No se aplicará decoración.");
+                    System.out.println("\nNo se aplicará decoración.");
                 }
             } else {
-                System.out.println("No se agregará decoración. Continuando con la producción.");
+                System.out.println("\nNo se agregará decoración. Continuando con la producción.");
                 return;
             }
 
@@ -29,10 +28,9 @@ public class Decoracion extends LineaProduccion{
             if (continuarProduccion.equals("si")) {
                 ejecutarProcesoDecoracion();
             } else {
-                System.out.println("Producción cancelada.");
+                System.out.println("\nProducción cancelada.");
             }
         }
-    }
 	
 	private String seleccionarDecoracion(Scanner scanner) {
 		String[] decoracion = {"Mirella", "Flores", "Copos brillantes"};
@@ -47,7 +45,7 @@ public class Decoracion extends LineaProduccion{
             mostrarColoresParaDecoracion(scanner, seleccion);
             return seleccion;
         } else {
-            System.out.println("Selección no válida. No se aplicará decoración.");
+            System.out.println("\nSelección no válida. No se aplicará decoración.");
             return null;
         }
     }
@@ -78,7 +76,7 @@ public class Decoracion extends LineaProduccion{
         if (seleccionColor >= 1 && seleccionColor <= colores.length) {
             System.out.println("\nHa seleccionado el color: " + colores[seleccionColor - 1]);
         } else {
-            System.out.println("Selección de color no válida. No se aplicará color.");
+            System.out.println("\nSelección de color no válida. No se aplicará color.");
         }
     }
     
@@ -90,13 +88,10 @@ public class Decoracion extends LineaProduccion{
 			System.out.println("La decoración está lista.");
 			Thread.sleep(2000);
 		
-            System.out.println("Decoración finalizada con éxito.");
+            System.out.println("\nDecoración finalizada con éxito.");
             Thread.sleep(2000);
             } catch (InterruptedException e) {
-            	System.out.println("Error en la decoración: " + e.getMessage());
+            	System.out.println("\nError en la decoración: " + e.getMessage());
 	        }
-  
 	}
 }
-
-
