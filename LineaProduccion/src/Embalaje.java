@@ -33,6 +33,8 @@ public class Embalaje extends LineaProduccion {
 
             System.out.println("\nTu embalaje está listo para envío.");
             Thread.sleep(2000);
+            
+            return;
 
         } catch (InterruptedException e) {
             System.out.println("Error en la producción: " + e.getMessage());

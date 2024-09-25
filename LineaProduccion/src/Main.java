@@ -5,14 +5,17 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;
         Robotica robotica = null;
+        Reutilizacion reutilizacion = null;
 
         do {
             System.out.println("\nSeleccione una línea de producción:");
             System.out.println("1. Robótica");
             System.out.println("2. Decoración");
             System.out.println("3. Control de Calidad");
-            System.out.println("4. Embalaje");
-            System.out.println("5. Salir");
+            System.out.println("4. Reutilización");
+            System.out.println("5. Control de calidad de la Reutilización");
+            System.out.println("6. Embalaje");
+            System.out.println("7. Salir");
 
             if (scanner.hasNextInt()) {
                 opcion = scanner.nextInt();
@@ -36,10 +39,27 @@ public class Main {
                         lineaSeleccionada = new ControlCalidad(robotica); 
                         break;
                     case 4:
-                        lineaSeleccionada = new Embalaje();
+                    	reutilizacion = new Reutilizacion();
+                        lineaSeleccionada = reutilizacion;
                         break;
                     case 5:
+                    	 if (reutilizacion == null) {
+                             System.out.println("Primero debes producir en la línea de Robótica.");
+                             continue;
+                         }
+                        lineaSeleccionada = new ControlReutilizados(reutilizacion);
+                        break;
+                    case 6:
+                        lineaSeleccionada = new Embalaje();
+                        break;
+                    case 7:
                         System.out.println("\nSaliendo del sistema...");
+					try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+                        System.out.println("\nHas salido del sistema.");
                         break;
                     default:
                         System.out.println("\nOpción no válida. Intenta de nuevo.");
@@ -54,7 +74,7 @@ public class Main {
                 System.out.println("\nEntrada no válida. Por favor, ingresa un número.");
                 scanner.next(); 
             }
-        } while (opcion != 5);
+        } while (opcion != 7);
 
         scanner.close();
     }

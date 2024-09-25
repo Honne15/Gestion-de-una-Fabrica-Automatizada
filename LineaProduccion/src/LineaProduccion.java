@@ -4,6 +4,8 @@ public class LineaProduccion {
 	public static final int ROBOTICA = 180;
     public static final int DECORACION = 60;
     public static final int CONTROLCALIDAD = 120;
+    public static final int REUTILIZACION = 90;
+    public static final int CONTROLREUTILIZADOS = 100;
     public static final int EMBALAJE = 120;
     
     protected String nombreLinea;
