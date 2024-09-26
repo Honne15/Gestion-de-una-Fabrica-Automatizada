@@ -98,7 +98,7 @@ public class Robotica extends LineaProduccion {
                     System.out.println("Vertiendo la cera en los envases...");
                     Thread.sleep(2000);
 
-                    System.out.println("Producción finalizada con éxito.");
+                    System.out.println("\nProducción finalizada con éxito.");
                     Thread.sleep(2000);
                     return;
                 } catch (InterruptedException e) {
