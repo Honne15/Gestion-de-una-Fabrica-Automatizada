@@ -34,6 +34,8 @@ public class Embalaje extends LineaProduccion {
             System.out.println("\nTu embalaje está listo para envío.");
             Thread.sleep(2000);
             
+            dibujarCuadrado(5);
+                  
             return;
 
         } catch (InterruptedException e) {
@@ -71,6 +73,15 @@ public class Embalaje extends LineaProduccion {
                         remitente.toString() + "\n\n" +
                         destinatario.toString();
         return rotulo;
+    }
+    
+    private void dibujarCuadrado(int tamaño) {
+        for (int i = 0; i < tamaño; i++) {
+            for (int j = 0; j < tamaño; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
     }
 
     class Destinatario {
