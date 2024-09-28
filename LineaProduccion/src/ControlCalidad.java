@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class ControlCalidad extends LineaProduccion {
+	public static final int CONTROLCALIDAD = 120;
+	
     private Robotica robotica;
 
     public ControlCalidad(Robotica robotica) {

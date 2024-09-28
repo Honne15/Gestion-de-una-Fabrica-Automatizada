@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Robotica extends LineaProduccion {
+	public static final int ROBOTICA = 180;
+	
     private int cantidadEnvases;
 
     public Robotica() {

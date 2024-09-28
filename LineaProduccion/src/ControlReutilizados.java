@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class ControlReutilizados extends LineaProduccion{
+	public static final int CONTROLREUTILIZADOS = 100;
+	
 	private Reutilizacion reutilizacion;
 
     public ControlReutilizados(Reutilizacion reutilizacion) {

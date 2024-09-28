@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Embalaje extends LineaProduccion {
+	public static final int EMBALAJE = 120;
 
     public Embalaje() {
         super("Embalaje");

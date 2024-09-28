@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Decoracion extends LineaProduccion {
+	public static final int DECORACION = 60;
 	
 	public Decoracion() {
         super("Decoración");  

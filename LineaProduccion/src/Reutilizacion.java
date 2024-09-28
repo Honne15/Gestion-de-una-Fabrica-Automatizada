@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Reutilizacion extends LineaProduccion{
+	public static final int REUTILIZACION = 90;
+	
 	private int cantidadReutilizados;
 	
 	public Reutilizacion() {
